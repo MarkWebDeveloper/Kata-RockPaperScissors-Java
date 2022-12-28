@@ -2,12 +2,37 @@
 
 Kata to practice with java
 
-## Rules
 
-Create a Rock Paper Scissors game, which can be played with a number of rule sets and against both human and computer controlled players.
+## Requiered
+
+- Minimum Java 11
+## DevDependency
+- JUnit
+## Installation
+
+Just clone the Kata
+
+    
+## Instructions
+
+> Create a Rock Paper Scissors game, which can be played with a number of rule sets and against both human and computer controlled players.
 
 - https://agilekatas.co.uk/katas/RockPaperScissors-Kata
 
-### Extra
 
-Try implements Factory Method design pattern
+## Extras
+
+1. Add "Lizard" and "Spock" - Sheldon Version
+
+    * scissors cuts paper
+    * paper covers rock
+    * rock cruches lizard
+    * lizard poisons spock
+    * spock smashes scissors
+    * scissors decapitates lizard
+    * lizard eats paper
+    * paper disproves spock
+    * spock vaporizes rock
+    * rock crushes scissors
+
+2. Try implements Factory Method design pattern
