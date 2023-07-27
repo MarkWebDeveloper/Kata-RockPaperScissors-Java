@@ -5,12 +5,13 @@ Kata to practice with java
 
 ## Requiered
 
-- Minimum Java 11
+- Minimum Java 17
 ## DevDependency
 - JUnit
+
 ## Installation
 
-Just clone the Kata
+Just clone the Kata or fork it
 
     
 ## Instructions
@@ -20,7 +21,7 @@ Just clone the Kata
 - https://agilekatas.co.uk/katas/RockPaperScissors-Kata
 
 
-## Extras
+## Next Steps
 
 1. Add "Lizard" and "Spock" - Sheldon Version
 
