@@ -38,9 +38,25 @@ public class GameTest {
     }
 
     @Test
-    public void rockBeatsScissorsHeWins() {
+    public void rockBeatsScissorsOtherWins() {
         me.setFigure(scissors);
         otherGuy.setFigure(rock);
+        game.play();
+        assertThat(game.getWinner(), is(otherGuy));
+    }
+
+    @Test
+    public void ScissorsBeatsPaperIWin() {
+        me.setFigure(scissors);
+        otherGuy.setFigure(paper);
+        game.play();
+        assertThat(game.getWinner(), is(me));
+    }
+
+    @Test
+    public void ScissorsBeatsPaperOtherWins() {
+        me.setFigure(paper);
+        otherGuy.setFigure(scissors);
         game.play();
         assertThat(game.getWinner(), is(otherGuy));
     }
