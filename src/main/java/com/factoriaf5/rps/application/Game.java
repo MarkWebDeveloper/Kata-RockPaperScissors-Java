@@ -35,6 +35,16 @@ public class Game {
             winner = player2;
             return;
         }
+
+        if (player1.getFigure().getType() == "paper" && player2.getFigure().getType() == "rock") {
+            winner = player1;
+            return;
+        }
+
+        if (player2.getFigure().getType() == "paper" && player1.getFigure().getType() == "rock") {
+            winner = player2;
+            return;
+        }
     }
 
     public Player getPlayer1() {

@@ -60,4 +60,19 @@ public class GameTest {
         game.play();
         assertThat(game.getWinner(), is(otherGuy));
     }
+
+    public void PaperBeatsRockIWin() {
+        me.setFigure(paper);
+        otherGuy.setFigure(rock);
+        game.play();
+        assertThat(game.getWinner(), is(me));
+    }
+
+    @Test
+    public void PaperBeatsRockOtherWins() {
+        me.setFigure(rock);
+        otherGuy.setFigure(paper);
+        game.play();
+        assertThat(game.getWinner(), is(otherGuy));
+    }
 }
