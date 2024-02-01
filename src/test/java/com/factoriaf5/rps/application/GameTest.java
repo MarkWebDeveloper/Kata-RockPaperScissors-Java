@@ -2,6 +2,7 @@ package com.factoriaf5.rps.application;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -74,5 +75,26 @@ public class GameTest {
         otherGuy.setFigure(paper);
         game.play();
         assertThat(game.getWinner(), is(otherGuy));
+    }
+
+    public void RockVsRockIsDraw() {
+        me.setFigure(rock);
+        otherGuy.setFigure(rock);
+        game.play();
+        assertThat(game.getWinner(), is(nullValue()));
+    }
+
+    public void ScissorsVsScissorsIsDraw() {
+        me.setFigure(scissors);
+        otherGuy.setFigure(scissors);
+        game.play();
+        assertThat(game.getWinner(), is(nullValue()));
+    }
+
+    public void PaperVsPaperIsDraw() {
+        me.setFigure(rock);
+        otherGuy.setFigure(rock);
+        game.play();
+        assertThat(game.getWinner(), is(nullValue()));
     }
 }
