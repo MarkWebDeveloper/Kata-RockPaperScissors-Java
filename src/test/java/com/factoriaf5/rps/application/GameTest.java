@@ -141,4 +141,20 @@ public class GameTest {
         game.play();
         assertThat(game.getWinner(), is(otherGuy));
     }
+
+    @Test
+    public void SpockSmashesScissorsIWin() {
+        me.setFigure(spock);
+        otherGuy.setFigure(scissors);
+        game.play();
+        assertThat(game.getWinner(), is(me));
+    }
+
+    @Test
+    public void SpockSmashesScissorsOtherWins() {
+        otherGuy.setFigure(spock);
+        me.setFigure(scissors);
+        game.play();
+        assertThat(game.getWinner(), is(otherGuy));
+    }
 }

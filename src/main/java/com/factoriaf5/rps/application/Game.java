@@ -60,6 +60,16 @@ public class Game {
             return;
         }
 
+        if (player1FigureType == "spock" && player2FigureType == "scissors") {
+            winner = player1;
+            return;
+        }
+
+        if (player2FigureType == "spock" && player1FigureType == "scissors") {
+            winner = player2;
+            return;
+        }
+
         if (player1FigureType.equals(player2FigureType)) {
             isDraw = true;
         }
