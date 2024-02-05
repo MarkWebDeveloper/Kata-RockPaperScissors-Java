@@ -17,47 +17,50 @@ public class Game {
     }
 
     public void play() {
-        if (player1.getFigure().getType() == "rock" && player2.getFigure().getType() == "scissors") {
+        String player1FigureType = player1.getFigure().getType();
+        String player2FigureType = player2.getFigure().getType();
+
+        if (player1FigureType == "rock" && player2FigureType == "scissors") {
             winner = player1;
             return;
         }
 
-        if (player2.getFigure().getType() == "rock" && player1.getFigure().getType() == "scissors") {
+        if (player2FigureType == "rock" && player1FigureType == "scissors") {
             winner = player2;
             return;
         }
 
-        if (player1.getFigure().getType() == "scissors" && player2.getFigure().getType() == "paper") {
+        if (player1FigureType == "scissors" && player2FigureType == "paper") {
             winner = player1;
             return;
         }
 
-        if (player2.getFigure().getType() == "scissors" && player1.getFigure().getType() == "paper") {
+        if (player2FigureType == "scissors" && player1FigureType == "paper") {
             winner = player2;
             return;
         }
 
-        if (player1.getFigure().getType() == "paper" && player2.getFigure().getType() == "rock") {
+        if (player1FigureType == "paper" && player2FigureType == "rock") {
             winner = player1;
             return;
         }
 
-        if (player2.getFigure().getType() == "paper" && player1.getFigure().getType() == "rock") {
+        if (player2FigureType == "paper" && player1FigureType == "rock") {
             winner = player2;
             return;
         }
 
-        if (player1.getFigure().getType() == "rock" && player2.getFigure().getType() == "rock") {
+        if (player1FigureType == "rock" && player2FigureType == "rock") {
             isDraw = true;
             return;
         }
 
-        if (player1.getFigure().getType() == "scissors" && player2.getFigure().getType() == "scissors") {
+        if (player1FigureType == "scissors" && player2FigureType == "scissors") {
             isDraw = true;
             return;
         }
 
-        if (player1.getFigure().getType() == "paper" && player2.getFigure().getType() == "paper") {
+        if (player1FigureType == "paper" && player2FigureType == "paper") {
             isDraw = true;
             return;
         }
