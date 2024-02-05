@@ -20,52 +20,52 @@ public class Game {
         String player1FigureType = player1.getFigure().getType();
         String player2FigureType = player2.getFigure().getType();
 
-        if (player1FigureType == "rock" && (player2FigureType == "scissors" || player2FigureType == "spock")) {
+        if (player1FigureType == "rock" && (player2FigureType == "scissors" || player2FigureType == "lizard")) {
             winner = player1;
             return;
         }
 
-        if (player2FigureType == "rock" && (player1FigureType == "scissors" || player1FigureType == "spock")) {
+        if (player2FigureType == "rock" && (player1FigureType == "scissors" || player1FigureType == "lizard")) {
             winner = player2;
             return;
         }
 
-        if (player1FigureType == "scissors" && player2FigureType == "paper") {
+        if (player1FigureType == "scissors" && (player2FigureType == "paper" || player2FigureType == "lizard")) {
             winner = player1;
             return;
         }
 
-        if (player2FigureType == "scissors" && player1FigureType == "paper") {
+        if (player2FigureType == "scissors" && (player1FigureType == "paper" || player1FigureType == "lizard")) {
             winner = player2;
             return;
         }
 
-        if (player1FigureType == "paper" && player2FigureType == "rock") {
+        if (player1FigureType == "paper" && (player2FigureType == "rock" || player2FigureType == "spock")) {
             winner = player1;
             return;
         }
 
-        if (player2FigureType == "paper" && player1FigureType == "rock") {
+        if (player2FigureType == "paper" && (player1FigureType == "rock" || player1FigureType == "spock")) {
             winner = player2;
             return;
         }
 
-        if (player1FigureType == "lizard" && player2FigureType == "spock") {
+        if (player1FigureType == "lizard" && (player2FigureType == "spock" || player2FigureType == "paper")) {
             winner = player1;
             return;
         }
 
-        if (player2FigureType == "lizard" && player1FigureType == "spock") {
+        if (player2FigureType == "lizard" && (player1FigureType == "spock" || player1FigureType == "paper")) {
             winner = player2;
             return;
         }
 
-        if (player1FigureType == "spock" && player2FigureType == "scissors") {
+        if (player1FigureType == "spock" && (player2FigureType == "scissors" || player2FigureType == "rock")) {
             winner = player1;
             return;
         }
 
-        if (player2FigureType == "spock" && player1FigureType == "scissors") {
+        if (player2FigureType == "spock" && (player1FigureType == "scissors" || player1FigureType == "rock")) {
             winner = player2;
             return;
         }

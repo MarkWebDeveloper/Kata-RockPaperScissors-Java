@@ -113,7 +113,7 @@ public class GameTest {
     @Test
     public void RockCrushesLizardIWin() {
         me.setFigure(rock);
-        otherGuy.setFigure(spock);
+        otherGuy.setFigure(lizard);
         game.play();
         assertThat(game.getWinner(), is(me));
     }
@@ -121,7 +121,7 @@ public class GameTest {
     @Test
     public void RockCrushesLizardOtherWins() {
         otherGuy.setFigure(rock);
-        me.setFigure(spock);
+        me.setFigure(lizard);
         game.play();
         assertThat(game.getWinner(), is(otherGuy));
     }
@@ -154,6 +154,70 @@ public class GameTest {
     public void SpockSmashesScissorsOtherWins() {
         otherGuy.setFigure(spock);
         me.setFigure(scissors);
+        game.play();
+        assertThat(game.getWinner(), is(otherGuy));
+    }
+
+    @Test
+    public void ScissorsDecapitatesLizardIWin() {
+        me.setFigure(scissors);
+        otherGuy.setFigure(lizard);
+        game.play();
+        assertThat(game.getWinner(), is(me));
+    }
+
+    @Test
+    public void ScissorsDecapitatesLizardOtherWins() {
+        otherGuy.setFigure(scissors);
+        me.setFigure(lizard);
+        game.play();
+        assertThat(game.getWinner(), is(otherGuy));
+    }
+
+    @Test
+    public void LizardEatsPaperIWin() {
+        me.setFigure(lizard);
+        otherGuy.setFigure(paper);
+        game.play();
+        assertThat(game.getWinner(), is(me));
+    }
+
+    @Test
+    public void LizardEatsPaperOtherWins() {
+        otherGuy.setFigure(lizard);
+        me.setFigure(paper);
+        game.play();
+        assertThat(game.getWinner(), is(otherGuy));
+    }
+
+    @Test
+    public void PaperDisprovesSpockIWin() {
+        me.setFigure(paper);
+        otherGuy.setFigure(spock);
+        game.play();
+        assertThat(game.getWinner(), is(me));
+    }
+
+    @Test
+    public void PaperDisprovesSpockOtherWIns() {
+        otherGuy.setFigure(paper);
+        me.setFigure(spock);
+        game.play();
+        assertThat(game.getWinner(), is(otherGuy));
+    }
+
+    @Test
+    public void SpockVaporizesRockIWin() {
+        me.setFigure(spock);
+        otherGuy.setFigure(rock);
+        game.play();
+        assertThat(game.getWinner(), is(me));
+    }
+
+    @Test
+    public void SpockVaporizesRockOtherWins() {
+        otherGuy.setFigure(spock);
+        me.setFigure(rock);
         game.play();
         assertThat(game.getWinner(), is(otherGuy));
     }
