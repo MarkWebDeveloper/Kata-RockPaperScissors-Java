@@ -6,6 +6,7 @@ public class Game {
     public Player player1;
     public Player player2;
     public Player winner;
+    public boolean isDraw;
     
     public Game() {
     }
@@ -47,17 +48,17 @@ public class Game {
         }
 
         if (player1.getFigure().getType() == "rock" && player2.getFigure().getType() == "rock") {
-            winner = null;
+            isDraw = true;
             return;
         }
 
         if (player1.getFigure().getType() == "scissors" && player2.getFigure().getType() == "scissors") {
-            winner = null;
+            isDraw = true;
             return;
         }
 
         if (player1.getFigure().getType() == "paper" && player2.getFigure().getType() == "paper") {
-            winner = null;
+            isDraw = true;
             return;
         }
         
@@ -85,6 +86,14 @@ public class Game {
 
     public void setWinner(Player winner) {
         this.winner = winner;
+    }
+
+    public boolean isDraw() {
+        return isDraw;
+    }
+
+    public void setDraw(boolean isDraw) {
+        this.isDraw = isDraw;
     }
     
 }

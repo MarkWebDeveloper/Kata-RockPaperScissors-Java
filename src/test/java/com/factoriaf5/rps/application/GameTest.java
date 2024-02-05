@@ -77,24 +77,30 @@ public class GameTest {
         assertThat(game.getWinner(), is(otherGuy));
     }
 
+    @Test
     public void RockVsRockIsDraw() {
         me.setFigure(rock);
         otherGuy.setFigure(rock);
         game.play();
         assertThat(game.getWinner(), is(nullValue()));
+        assertThat(game.isDraw(), is(true));
     }
 
+    @Test
     public void ScissorsVsScissorsIsDraw() {
         me.setFigure(scissors);
         otherGuy.setFigure(scissors);
         game.play();
         assertThat(game.getWinner(), is(nullValue()));
+        assertThat(game.isDraw(), is(true));
     }
 
+    @Test
     public void PaperVsPaperIsDraw() {
         me.setFigure(rock);
         otherGuy.setFigure(rock);
         game.play();
         assertThat(game.getWinner(), is(nullValue()));
+        assertThat(game.isDraw(), is(true));
     }
 }
