@@ -7,10 +7,12 @@ import static org.hamcrest.Matchers.nullValue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.factoriaf5.rps.models.Lizard;
 import com.factoriaf5.rps.models.Paper;
 import com.factoriaf5.rps.models.Player;
 import com.factoriaf5.rps.models.Rock;
 import com.factoriaf5.rps.models.Scissors;
+import com.factoriaf5.rps.models.Spock;
 
 public class GameTest {
     Player me;
@@ -18,6 +20,8 @@ public class GameTest {
     Rock rock;
     Paper paper;
     Scissors scissors;
+    Lizard lizard;
+    Spock spock;
     Game game;
 
     @BeforeEach
@@ -27,6 +31,8 @@ public class GameTest {
         rock = new Rock("rock");
         paper = new Paper("paper");
         scissors = new Scissors("scissors");
+        lizard = new Lizard("lizard");
+        spock = new Spock("spock");
         game = new Game(me, otherGuy);
     }
 
@@ -102,5 +108,21 @@ public class GameTest {
         game.play();
         assertThat(game.getWinner(), is(nullValue()));
         assertThat(game.isDraw(), is(true));
+    }
+
+    @Test
+    public void RockCrushesLizardIWin() {
+        me.setFigure(rock);
+        otherGuy.setFigure(spock);
+        game.play();
+        assertThat(game.getWinner(), is(me));
+    }
+
+    @Test
+    public void RockCrushesLizardOtherWins() {
+        otherGuy.setFigure(rock);
+        me.setFigure(spock);
+        game.play();
+        assertThat(game.getWinner(), is(otherGuy));
     }
 }

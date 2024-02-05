@@ -20,12 +20,12 @@ public class Game {
         String player1FigureType = player1.getFigure().getType();
         String player2FigureType = player2.getFigure().getType();
 
-        if (player1FigureType == "rock" && player2FigureType == "scissors") {
+        if (player1FigureType == "rock" && (player2FigureType == "scissors" || player2FigureType == "spock")) {
             winner = player1;
             return;
         }
 
-        if (player2FigureType == "rock" && player1FigureType == "scissors") {
+        if (player2FigureType == "rock" && (player1FigureType == "scissors" || player1FigureType == "spock")) {
             winner = player2;
             return;
         }
