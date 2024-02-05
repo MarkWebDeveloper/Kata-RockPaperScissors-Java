@@ -50,6 +50,16 @@ public class Game {
             return;
         }
 
+        if (player1FigureType == "lizard" && player2FigureType == "spock") {
+            winner = player1;
+            return;
+        }
+
+        if (player2FigureType == "lizard" && player1FigureType == "spock") {
+            winner = player2;
+            return;
+        }
+
         if (player1FigureType == "rock" && player2FigureType == "rock") {
             isDraw = true;
             return;
