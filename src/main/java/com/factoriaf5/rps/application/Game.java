@@ -60,19 +60,8 @@ public class Game {
             return;
         }
 
-        if (player1FigureType == "rock" && player2FigureType == "rock") {
+        if (player1FigureType.equals(player2FigureType)) {
             isDraw = true;
-            return;
-        }
-
-        if (player1FigureType == "scissors" && player2FigureType == "scissors") {
-            isDraw = true;
-            return;
-        }
-
-        if (player1FigureType == "paper" && player2FigureType == "paper") {
-            isDraw = true;
-            return;
         }
         
     }
